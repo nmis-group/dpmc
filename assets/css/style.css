@@ -147,3 +147,92 @@ footer {
   80% { clip-path: inset(90% 0 2% 0); }
   100% { clip-path: inset(5% 0 80% 0); }
 }
+
+header h2.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+section {
+    background: rgba(10, 10, 10, 0.7);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(255, 184, 0, 0.1);
+}
+
+h2, h3 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Glitch effect for header */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  overflow: hidden;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 var(--secondary-color);
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -1px 0 var(--primary-color), 1px 0 blue;
+  animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip-path: inset(10% 0 80% 0); }
+  20% { clip-path: inset(50% 0 30% 0); }
+  40% { clip-path: inset(25% 0 55% 0); }
+  60% { clip-path: inset(80% 0 5% 0); }
+  80% { clip-path: inset(40% 0 45% 0); }
+  100% { clip-path: inset(70% 0 10% 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: inset(85% 0 5% 0); }
+  20% { clip-path: inset(15% 0 70% 0); }
+  40% { clip-path: inset(60% 0 20% 0); }
+  60% { clip-path: inset(30% 0 50% 0); }
+  80% { clip-path: inset(90% 0 2% 0); }
+  100% { clip-path: inset(5% 0 80% 0); }
+}
