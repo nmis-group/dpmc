@@ -1,0 +1,58 @@
+// Import a Google Font for the Deus Ex feel
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+// --- DEUS EX THEME OVERRIDE ---
+
+// Define the color palette
+$background: #000000;
+$foreground: #C7C7C7; // A very light grey for text
+$gold: #FFB000;       // A vibrant gold/amber for accents
+$border-grey: #333;
+
+// Override base styles. Using !important to ensure overrides take precedence over the theme's styles.
+body {
+  background: $background !important;
+  color: $foreground !important;
+  font-family: 'Space Mono', monospace !important;
+  text-shadow: 0 0 2px $foreground; // Subtle glow
+}
+
+// Override header and link colors
+h1, h2, h3, h4, h5, h6 {
+  color: $gold !important;
+  border-bottom-color: $border-grey !important;
+}
+
+a, a:visited {
+  color: $gold !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted $gold !important;
+}
+
+a:hover, a:focus {
+  color: #FFF !important;
+  text-shadow: 0 0 5px $gold;
+  border-bottom-style: solid !important;
+}
+
+// Add a top border to the body for a distinct look
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: $gold;
+  box-shadow: 0 0 10px $gold;
+}
+
+// Style the header to match
+header h1 {
+  text-shadow: 0 0 10px $gold;
+}
+
+// Reset conflicting styles from the base 'hacker' theme
+header {
+    border: 0 !important;
+}
